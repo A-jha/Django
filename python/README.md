@@ -461,3 +461,267 @@ print(random.randrange(1,10))
 - This will produce random number between 1 to 9
 
 ### Python Casting
+
+Python is an Object oriented programming language and it used class to define data types, including its primitive types.
+
+**Casting in Python is done using Constructor function.**
+
+- int() - Constructs an
+
+  - Integer number from an integer literal,
+  - a float literal (by removing all decimal),
+  - a string literal(by providing the string represents a whole number)
+
+- float() - Constructs an
+
+  - Float number from an integer literal
+  - A string literal to float
+
+- str() - Constructs a string from wide variety of data types, including string, integer and float literals
+
+Example of Int casting
+
+```py
+x = int(1) # x = 1
+x = int(5.6) # x = 5
+x = int("3") # x = 3
+```
+
+Example of Float Casting
+
+```py
+x = float(1) # x = 1.0
+y = float(5.6) # y = 5.6
+z = float("3")  # z = 3.0
+w = float("4.4") # w = 4.4
+```
+
+Example of String casting
+
+```py
+x = str("s1") # x = 's1'
+y = str(2)  # x = '2'
+z = str(3.0) # z = '3.0'
+```
+
+## Python String
+
+### Assigning string to a variable
+
+```py
+a = "string ha ha ha"
+```
+
+### Multiline String variable
+
+```py
+
+a = """
+Hi My name is Python
+I am an Object oriented programming language
+If you want then you can learn
+ha ha
+ha ha
+ha
+"""
+print(a)
+```
+
+### String are Array
+
+String in python is an array of bytes representing unicode characters.
+
+**Note:** Python does not have character data type, a single char is simply a string with length 1.
+
+Example:
+
+```py
+a = "Hello, World!"
+print(a[1])
+```
+
+### Looping thorough String
+
+String is an array so looping through it is easy.
+
+```py
+x = "Avinash"
+
+for i in x:
+  print(i)
+```
+
+Output:
+
+```
+A
+v
+i
+n
+a
+s
+h
+```
+
+### String Length
+
+To get the length of string we use `len()` function.
+
+```py
+x = "Avinash"
+print(len(x))
+```
+
+### Check sub string in string
+
+To check if a sub string is part of a given string.
+
+- **in** is used
+
+```py
+x = "I don't think i am learning i think i am willing to learn"
+
+print("learn" in x)
+
+if "learn" in x:
+    print("Yes, 'learn' is present")
+```
+
+Output:
+
+```
+True
+Yes, 'learn' is present
+```
+
+### Check if not
+
+To check if certain substring is not part of string.
+
+Example:
+
+```py
+x = "I don't think i am learning i think i am willing to learn"
+
+print("love" not in x) # true
+```
+
+### Slicing String
+
+This is one of the important concept in python string.
+
+Specify the starting and end index, separated by colon, to return the part of string
+
+Example:
+
+```py
+b = "Avinash"
+print(b[2:5])# 2 to 4 note 5 is not included
+```
+
+- Slicing From start
+
+  ```py
+  b = "sad life"
+  print(b[:5])#get char from start to index 4
+  ```
+
+- Slicing to the end
+
+  ```py
+  b = "Happy coding"
+  print(b[4:]) # get char from index 2 to end
+  ```
+
+- Negative indexing
+  ```
+   A   v   i   n   a   s   h
+   0   1   2   3   4   5   6
+  -7  -6  -5  -4  -3  -2  -1
+  ```
+  ```py
+  b = "mood off"
+  print(b[-5])#d
+  print(b[-5,-2]) # d 0
+  ```
+
+### Modify String
+
+#### Upper case
+
+The `upper()` methods returns string in upper case
+
+```py
+a = "Mood off"
+print(a.upper())
+```
+
+#### Lower Case
+
+The `lower()` methods returns string in lower case
+
+```py
+a = "Mood off"
+print(a.lower())
+```
+
+#### Remove White Space
+
+The `strip()` method removes any white space from beginning and end.
+
+```py
+x = "        Avinash  is buddy    "
+print(x)
+print(x.strip())
+```
+
+Output:
+
+```
+        Avinash  is buddy
+Avinash  is buddy
+```
+
+#### Replace String
+
+The `replace()` method replaces a string with another string.
+
+```py
+x = "sam is a good boy"
+print(x.replace("sam","Avinash"))
+```
+
+Output:
+
+```
+Avinash is a good boy
+```
+
+#### Split String
+
+The `split()` method return a list where the text between the specified separator becomes the list items.
+
+```py
+a = "Hey there how are you"
+print(a.split(" "))
+```
+
+Output:
+
+```
+['Hey', 'there', 'how', 'are', 'you']
+```
+
+### String Concatenation
+
+Concatenation means combining two string using `+` operator.
+
+```py
+a = "Hello"
+
+b = "world"
+
+c = a + b
+
+print(c)
+```
