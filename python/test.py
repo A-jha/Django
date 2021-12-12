@@ -1,3 +1,2 @@
-
-a = "Hey there how are you"
-print(a.split(" "))
+x = "My  name is \"Avinash jha\""
+print(x)

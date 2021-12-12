@@ -718,10 +718,78 @@ Concatenation means combining two string using `+` operator.
 
 ```py
 a = "Hello"
-
 b = "world"
-
 c = a + b
-
 print(c)
 ```
+
+### String Format
+
+In Python we can not combine string and numbers.
+
+```py
+x = 21
+y = "My name is Avinash and I am of age "+age
+
+print(y)
+```
+
+Output Error:
+
+```
+TypeError: cannot concatenate 'str' and 'int' objects
+```
+
+To Solve this issue in python we have a method `format()`
+
+Format method takes passed arguments, formats then, and places them in the string where placeholder `{}` are
+
+```py
+x = 21
+dob = 21
+y = "My name is Avinash and I am of age {} and dob is {}"
+
+print(y.format(x,dob))
+```
+
+Output:
+
+```
+My name is Avinash and I am of age 21 and dob is 2
+```
+
+### Escape Character
+
+To insert the character that are illegal in a string, we use escape character `\`.
+
+Example:
+
+```py
+x = "My  name is "Avinash jha""
+print(x)
+```
+
+Output:
+
+```
+SyntaxError: invalid syntax
+```
+
+TO Solve these type of problem we use escape character
+
+```py
+x = "My Name is \"Avinash jha\""
+print(x)
+```
+
+Output:
+
+```
+My  name is "Avinash jha"
+```
+
+### Escape Characters
+
+| Code | Result       |
+| ---- | ------------ |
+| \'   | Single Quote |
