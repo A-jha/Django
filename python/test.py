@@ -1,2 +1,4 @@
-x = "My  name is \"Avinash jha\""
-print(x)
+
+t = ("Apple", "banana", "Cherry")
+print(t)
+print(type(t))

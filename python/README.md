@@ -790,6 +790,515 @@ My  name is "Avinash jha"
 
 ### Escape Characters
 
-| Code | Result       |
-| ---- | ------------ |
-| \'   | Single Quote |
+| Code | Result          |
+| ---- | --------------- |
+| \'   | Single Quote    |
+| \\   | Backslash       |
+| \n   | New Line        |
+| \r   | Carriage Return |
+| \t   | Tab             |
+| \b   | Backspace       |
+| \f   | Form Feed       |
+| \ooo | Octal Value     |
+| \xhh | Hex Value       |
+
+### String Methods
+
+There are many built in method that can be used in python string.
+
+All String method return a new value and they do not change the originam string.
+
+| Method         | Description                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| capitalize()   | covert the first char to upper case                                                           |
+| casefold()     | covert string into lowercase                                                                  |
+| center()       | Return centered string                                                                        |
+| count()        | return number of times specific value occurs in string                                        |
+| encode()       | returns encoded version of string                                                             |
+| endswith()     | return true if string ends with specific value                                                |
+| expandtabs()   | set tab size to the string                                                                    |
+| find()         | searches the string for a specified value and returns the position of where it was found      |
+| format()       | Formats specified values in a string                                                          |
+| format_map()   | Formats specified values in a string                                                          |
+| index()        | Searches the string for a specified value and returns the position of where it was found      |
+| isalnum()      | Returns True if all characters in the string are alphanumeric                                 |
+| isalpha()      | Returns True if all characters in the string are in the alphabet                              |
+| isdecimal()    | Returns True if all characters in the string are decimals                                     |
+| isdigit()      | Returns True if all characters in the string are digits                                       |
+| isidentifier() | Returns True if the string is an identifier                                                   |
+| islower()      | Returns True if all characters in the string are lower case                                   |
+| isnumeric()    | Returns True if all characters in the string are numeric                                      |
+| isprintable()  | Returns True if all characters in the string are printable                                    |
+| isspace()      | Returns True if all characters in the string are whitespaces                                  |
+| istitle()      | Returns True if the string follows the rules of a title                                       |
+| isupper()      | Returns True if all characters in the string are upper case                                   |
+| join()         | Joins the elements of an iterable to the end of the string                                    |
+| ljust()        | Returns a left justified version of the string                                                |
+| lower()        | Converts a string into lower case                                                             |
+| lstrip()       | Returns a left trim version of the string                                                     |
+| maketrans()    | Returns a translation table to be used in translations                                        |
+| partition()    | Returns a tuple where the string is parted into three parts                                   |
+| replace()      | Returns a string where a specified value is replaced with a specified value                   |
+| rfind()        | Searches the string for a specified value and returns the last position of where it was found |
+| rindex()       | Searches the string for a specified value and returns the last position of where it was found |
+| rjust()        | Returns a right justified version of the string                                               |
+| rpartition()   | Returns a tuple where the string is parted into three parts                                   |
+| rsplit()       | Splits the string at the specified separator, and returns a list                              |
+| rstrip()       | Returns a right trim version of the string                                                    |
+| split()        | Splits the string at the specified separator, and returns a list                              |
+| splitlines()   | Splits the string at line breaks and returns a list                                           |
+| startswith()   | Returns true if the string starts with the specified value                                    |
+| strip()        | Returns a trimmed version of the string                                                       |
+| swapcase()     | Swaps cases, lower case becomes upper case and vice versa                                     |
+| title()        | Converts the first character of each word to upper case                                       |
+| translate()    | Returns a translated string                                                                   |
+| upper()        | Converts a string into upper case                                                             |
+| zfill()        | Fills the string with a specified number of 0 values at the beginning                         |
+
+### Python Booleans
+
+In programming boolean means `true` or `false`.
+
+### Python Operators
+
+Operators are used to perform operations on variable and values.
+
+There are following types of operator in python:
+
+- Arithmetic operator : common mathematical operations
+
+  - \+ additions
+  - \- subtraction
+  - \* multiplication
+  - \/ division
+  - % modulus
+  - \*\* exponent
+  - // floor division
+
+- Assignment Operator : used to assign values to the variable.
+
+  - =, +=, -= etc
+
+- Comparison Operator: used to compare two values
+
+  - ==, !=, >, <, >=, <=
+
+- Logical Operator: used to combine conditional logic
+
+  - and : true if both true
+  - or : true if one is true
+  - not : true if false
+
+- Identity Operator: Used to compare the object, not if they are equal but if they are actually same with same memory location
+
+  - is : return true if both variable are the same object
+  - is not : returns true if both variables are not he same object
+
+- Membership Operator : used to test if a sequence is presented in object.
+
+  - in : returns true if sequence with specified value present in the object.
+  - not in : Returns true if sequence with the specified value is not present in the object
+
+- Bitwise Operator : used to compare binary number
+  |Operator|Name|Description|
+  |--------|----|-----------|
+  |&|AND|set each bit to 1 if both bit are 1|
+  |\||OR|set each bit to 1 if one of two bit is 1|
+  |^|XOR|set each bit to one if only one of the bit is 1|
+  |~|NOT|inverts all the bit|
+  |<<|zero fill left shift |shift left by pushing zero in from the right and left most bits fall off|
+  |>>|Signed right shift|Shift right by pushing copies of the leftmost bit in from the left and let the right most bit fall off|
+
+## Python Collections(Arrays)
+
+There are four collection data type in python.
+
+- **List** is a collection which is ordered and changeable. Allows duplicate members.
+
+- **Tuple** is a collection which is ordered and unchangeable. Allows duplicate members.
+
+- **Set()** is a collection which is unordered, unchangeable, and unindexed. No duplicate members.
+
+- **Dictionary** is a collection which is ordered and changeable. no duplicate members.
+
+### List
+
+List are used to store multiple items in a single variable
+
+```py
+listOfFruits = ["Apple","Banana"]
+print(listOfApple)
+```
+
+#### List items
+
+List items are ordered, changeable, and allow duplicate value.
+
+List items are indexed 0 to n-1
+
+- Ordered: In List items have a defined order.
+
+- **Changeable** : We can change add and remove items in a list after it has been created.
+
+- **Allow Duplicates** : List can have items with same value
+
+- **List Length** : `len()` function if used to check the length of the list.
+
+- List item can be of any data types
+
+- List are defined as an objects with data type **list**
+
+#### List constructor
+
+It is possible to use the **list()** constructor when creating a new list.
+
+### Access List Items
+
+list items are indexed and we can use index to access the item.
+
+```py
+l = [1,2,3,4,5]
+print(l[0])# l[0] = 1
+```
+
+#### Negative indexing
+
+Negative indexing means start from the end.
+
+-1 means last item
+-2 means second last
+
+```py
+l = ["apple","banana"]
+print(l[-1])# apple
+```
+
+#### Range of indexes
+
+Ypu can specify a range of indexes by specifying where to start and where to end.
+
+```py
+l = ["apple","mango","nut","banana"]
+print(l[1:3])# mango and nut
+```
+
+#### Check if item in list
+
+To determine specific item in a list use the `in` keyword.
+
+```py
+l = ["apple","mango","nut","banana"]
+
+if "apple" in l:
+  print("yes apple is the part of the list)
+else:
+  print("No it is not in list")
+```
+
+### Change List item
+
+To change specific value refers to the index value
+
+```py
+l = ["Avi","Ravi","Kavi"]
+l[0] = "Avinash"
+print(l[0])#Avinash
+```
+
+#### Change Range of items value
+
+```py
+l = ["Banana","apple","nut","mango","guava"]
+print(l)
+l[1:3]=["watermelon","grapes"]
+print(l)
+```
+
+Output:
+
+```
+['Banana', 'apple', 'nut', 'mango', 'guava']
+['Banana', 'watermelon', 'grapes', 'mango', 'guava']
+```
+
+### Insert item
+
+To insert new item in the list without replacing any of the existing values, we can use the insert method.
+
+The insert method insert item at specific index.
+
+```py
+l =["Banana","Apple","Mango"]
+l.insert(2,"Watermelon")# insert at index 2
+print(l)
+```
+
+### Append items
+
+To add item to the end of the list we use `append()` method.
+
+```py
+l = ["Apple","orange","banana"]
+l.append("watermelon")# insert watermelon at the end of list l
+print(l)
+```
+
+### Extend List
+
+We can add two list using `extend()` method.
+
+```py
+l = ["banana","apple","mango"]
+m = ["pineapple","grapes","papaya"]
+l.extend(m)
+print(l)
+```
+
+### add any iterable
+
+`extend()` method can also be used to append any iterable object (tuples, sets, dictionaries etc)
+
+```py
+l = ["apple","mango","grapes"]
+m = ("kiwi","orange")
+l.extend(m)
+print(l)
+```
+
+### Remove Specified item
+
+The `remove()` method removes the specified item.
+
+Example: Remove "banana"
+
+```py
+l = ["apple","banana","cherry"]
+l.remove("banana")
+print(l)
+```
+
+### Remove specific Index
+
+The `pop()` method removes the specified index.
+
+```py
+l = ["apple","banana","cherry"]
+l.pop(1)# remove index 1
+print(l)
+```
+
+### Remove last item
+
+The `pop()` method without any args will remove last element from the list.
+
+```py
+l = ["apple","banana","cherry"]
+l.pop()
+print(l)
+```
+
+### Remove item using del keyword
+
+The `del` keyword also removes the specified index.
+
+```py
+l = ["apple","banana","cherry"]
+del l[1] # remove banana from the list
+print(l)
+```
+
+### Delete the list completely
+
+The `del` key can also delete the list completely.
+
+```py
+l = ["banana","apple","cherry"]
+del l# this will delete the list completely
+```
+
+### clear the list
+
+`clear()` method empties the list.
+
+```py
+l = ["banana","apple","cherry"]
+l.clear()
+print(l)
+```
+
+### Loop through the list
+
+#### using for loop
+
+```py
+l = ["banana","apple","cherry"]
+for x in l:
+  print(x)
+```
+
+#### Loop through the index numbers
+
+```py
+l = ["banana","apple","cherry"]
+for i in range(len(l)):
+  print(l[i])
+```
+
+#### Using a while loop
+
+```py
+l = ["banana","apple","cherry"]
+i = 0;
+while i < len(l):
+  print(l[i])
+  i = i + 1
+```
+
+#### Looping Using list comprehension
+
+A short hand for loop that will print all item in a list.
+
+```py
+l = ["banana","apple","cherry"]
+[print(x) for x in l]
+```
+
+### List Comprehension
+
+List comprehension offers a shorter syntax when you want to create a new list based on the value of an existing list.
+
+Full code:
+
+```py
+l = ["banana","apple","cherry","kiwi","mango"]
+newList = []
+
+for x in l:
+  if "a" in x:
+    newList.append(x)
+
+print(newList)
+```
+
+Output:
+
+```
+['banana', 'apple', 'mango']
+```
+
+Short hand:
+
+```py
+l = ["banana","apple","cherry","kiwi","mango"]
+newList = [x for x in l if "a" in x]
+
+print(newList)
+```
+
+Output:
+
+```
+['banana', 'apple', 'mango']
+```
+
+### Sort List
+
+#### Sort list Alphanumerically
+
+List objects have a `sort()` method that will sort the list Alphanumerically, ascending, by default.
+
+Example:
+
+```py
+l = ["banana","apple","cherry","kiwi","mango"]
+l.sort()
+print(l)
+```
+
+Output:
+
+```
+['apple', 'banana', 'cherry', 'kiwi', 'mango']
+```
+
+Example:
+
+```py
+l = [100,30,50,40,20]
+l.sort()
+print(l)
+```
+
+Output:
+
+```
+[20, 30, 40, 50, 100]
+```
+
+#### Sort Descending
+
+To sort descending, use the keyword arguments reverse = True:
+
+Example:
+
+```py
+l = [100,30,50,40,20]
+l.sort(reverse=True)
+print(l)
+```
+
+Output:
+
+```
+[100, 50, 40, 30, 20]
+```
+
+### Reverse a list
+
+The `reverse()` method is used to reverse a list
+
+```py
+l = ["Apple","Banana","Mango"]
+l.reverse()
+print(l)
+```
+
+### Copy List
+
+You can nto copy list simply list1 = list2, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made.
+
+To copy a list to another list we use `copy()` method.
+
+```py
+l = ["Banana", "Apple", "Mango"]
+l1 = list(l)
+print(l1)
+```
+
+### Join List
+
+```py
+l1 = [1,2,3,4]
+l2 = ["A","B","C"]
+l3 = l1 + l2
+print(l3)
+```
+
+### Python Tuples
+
+Tuples are used to store multiple items in a single variable.
+
+- Unchangeable
+
+```py
+t = ("Apple","banana","Cherry")
+print(t)
+print(type(t))
+```
+
+Output:
+
+```
+('Apple', 'banana', 'Cherry')
+<type 'tuple'>
+```
