@@ -912,3 +912,237 @@ Output:
 ```
 {'dob': 2000, 'name': 'Ravi', 'roll': 3}
 ```
+
+### Remove Dict Item
+
+#### pop() method
+
+pop() method removes the item with the specific key name.
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+student.pop("name")
+print(student)
+```
+
+Output:
+
+```
+{'dob': 2000, 'roll': 1}
+```
+
+#### popitem() method
+
+popitem() method removes the last inserted item.
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+student.popitem()
+print(student)
+```
+
+Output:
+
+```
+{'name': 'Avinash', 'roll': 1}
+```
+
+#### del Keyword
+
+The del keyword removes the item with the specific key name.
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+del student["name"]
+print(Student)
+```
+
+- del keyword is also used to delete the dictionary completely.
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+del student
+print(student) # this will through an error because student is no more in the program
+```
+
+#### clear() method
+
+The clear() method empties the dictionary.
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+student.clear()
+print(student)#{}
+```
+
+### Loop Through Dictionary
+
+#### Print keys
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+for c in  student:
+    print(x)
+```
+
+#### Print Values
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+for c in  student:
+    print(student[x])
+```
+
+#### using values() method
+
+It will return values
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+for c in  student.values():
+    print(x)
+```
+
+#### using keys() method
+
+It will return keys of dict
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+for c in  student.keys():
+    print(x)
+```
+
+#### using items() method
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+for c in  student.items():
+    print(x)
+```
+
+### Copy dictionary
+
+Like set we can not directly write dict1 = dict2, because: dit2 will only be a reference to dict1, and any change in dic2 will reflect in dict2.
+
+#### Copy() method
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+newStudent = student.copy()
+print(newStudent)
+```
+
+Output:
+
+```
+{'dob': 2000, 'name': 'Avinash', 'roll': 1}
+```
+
+#### using dict() constructor
+
+```py
+student = {
+    "name": "Avinash",
+    "roll": 1,
+    "dob": 2000
+}
+newStudent = dict(student)
+print(newStudent)
+```
+
+### Nested Dictionaries
+
+A dictionary can contain dictionaries, this is called nested dictionaries.
+
+Example1:
+
+```py
+myClass = {
+    "student1":{
+        "name":"Avinash",
+        "roll":1,
+        "passing":2022
+    },
+    "student2":{
+        "name":"Sam",
+        "roll":2,
+        "passing":2022
+    },
+    "student3":{
+        "name":"Ravi",
+        "roll":3,
+        "passing":2022
+    }
+}
+```
+
+Example2:
+
+```py
+student1 = {
+    "name":"Avinash",
+    "roll":1,
+    "passing":2022
+}
+student2={
+    "name":"Sam",
+    "roll":2,
+    "passing":2022
+}
+student3={
+    "name":"Ravi",
+    "roll":3,
+    "passing":2022
+}
+# combine all 3 student to a class
+myClass = {
+    "student1":student1,
+    "student2":student2,
+    "student3":student3
+}
+```
